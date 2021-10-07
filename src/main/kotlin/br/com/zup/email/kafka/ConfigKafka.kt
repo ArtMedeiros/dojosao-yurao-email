@@ -31,7 +31,7 @@ class ConfigKafka(
         return DefaultKafkaConsumerFactory(
             consumerConfiguration(),
             StringDeserializer(),
-            JsonDeserializer(Any::class.java, false)
+            JsonDeserializer(TransacaoInput::class.java, false)
         )
     }
 
